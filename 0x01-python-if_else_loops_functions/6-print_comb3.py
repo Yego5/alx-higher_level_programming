@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for tens_digit in range(10):
-    for ones_digit in range(tens_digit + 1, 10):
-        print("{:02d}, ".format(tens_digit * 10 + ones_digit), end='')
-print()
+for nam1 in range(0, 10):
+    for nam2 in range(nam1 + 1, 10):
+        if nam1 == 8 and nam2 == 9:
+            print("{}{}".format(nam1, nam2))
+    	else:
+            print("{}{}".format(nam1, nam2), end=", ")
