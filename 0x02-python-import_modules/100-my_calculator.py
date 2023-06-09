@@ -20,4 +20,3 @@ if __name__ == "__main__":
 
     result = ops[operator](a, b)
     print("{} {} {} = {}".format(a, operator, b, result))
-
