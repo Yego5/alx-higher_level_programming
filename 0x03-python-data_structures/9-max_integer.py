@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def max_integer(inpt_list=[]):
-    if not inpt_list:
+def max_integer(input_list=[]):
+    if not input_list:
         return None
-    return sorted(inpt_list)[-1]
+    return sorted(input_list)[-1]]
