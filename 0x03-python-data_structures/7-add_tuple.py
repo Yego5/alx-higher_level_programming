@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-# 7-add_tuple.py
 
+def add_tuple(tuple_a=(), tuple_b=()):
+    itm_a = [0, 0]
+    itm_b = [0, 0]
 
-def add_tuple(nw_tuple_a=(), nw_tuple_b=()):
-	"""Add two tuples."""
-	if len(nw_tuple_a) < 2:
-    	if len(nw_tuple_a) == 0:
-        	nw_tuple_a = 0, 0
-    	else:
-        	nw_tuple_a = nw_tuple_a[0], 0
-	if len(nw_tuple_b) < 2:
-    	if len(nw_tuple_b) == 0:
-        	nw_tuple_b = 0, 0
-    	else:
-        	nw_tuple_b = nw_tuple_b[0], 0
+    if len(tuple_a) >= 2:
+        itm_a = tuple_a[:2]
+    elif len(tuple_a) == 1:
+        itm_a[0] = tuple_a[0]
 
-	return (nw_tuple_a[0] + nw_tuple_b[0], nw_tuple_a[1] + nw_tuple_b[1])
+    if len(tuple_b) >= 2:
+        itm_b = tuple_b[:2]
+    elif len(tuple_b) == 1:
+        itm_b[0] = tuple_b[0]
+
+    return tuple((itm_a[x] + itm_b[x]) for x in range(2))
