@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 import string
-upcs_ltte = string.ascii_uppercase
-print(upcs_ltte)
+uppercase_letters = string.ascii_uppercase
+print(uppercase_letters)
