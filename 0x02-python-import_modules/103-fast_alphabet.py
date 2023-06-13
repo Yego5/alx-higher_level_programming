@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 import string
-print(*string.ascii_uppercase, sep="")
+upcs_ltte = string.ascii_uppercase
+print(upcs_ltte)
