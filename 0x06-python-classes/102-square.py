@@ -1,36 +1,55 @@
+#!/usr/bin/python3
+"""Define a class Square."""
+
+
 class Square:
-    def __init__(self, size=0):
-        self.size = size
+    """Represent a square."""
+
+    def __init__(self, sz=0):
+        """Initialize a new square.
+
+        Args:
+            sz (int): The size of the new square.
+        """
+        self.sz = sz
 
     @property
-    def size(self):
-        return self.__s_size
+    def sz(self):
+        """Get/set the current size of the square."""
+        return self.__sz
 
-    @size.setter
-    def size(self, value):
-        if not isinstance(value, (int, float)):
-            raise TypeError("size must be a number")
+    @sz.setter
+    def sz(self, value):
+        if not isinstance(value, int):
+            raise TypeError("sz must be an integer")
         elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__s_size = value
+            raise ValueError("sz must be >= 0")
+        self.__sz = value
 
     def area(self):
-        return self.__s_size * self.__s_size
+        """Return the current area of the square."""
+        return self.__sz * self.__sz
 
     def __eq__(self, other):
+        """Define the == comparison to a Square."""
         return self.area() == other.area()
 
     def __ne__(self, other):
+        """Define the != comparison to a Square."""
         return self.area() != other.area()
 
     def __lt__(self, other):
+        """Define the < comparison to a Square."""
         return self.area() < other.area()
 
     def __le__(self, other):
+        """Define the <= comparison to a Square."""
         return self.area() <= other.area()
 
     def __gt__(self, other):
+        """Define the > comparison to a Square."""
         return self.area() > other.area()
 
     def __ge__(self, other):
+        """Define the >= comparison to a Square."""
         return self.area() >= other.area()
