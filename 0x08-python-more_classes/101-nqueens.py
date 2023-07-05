@@ -13,8 +13,8 @@ Attributes:
     board (list): A list of lists representing the chessboard.
     solutions (list): A list of lists containing solutions.
 
-Solutions are represented in the format [[rw, cl], [rw, cl], [rw, cl], [rw, cl]]
-where `rw` and `cl` represent the row and column, respectively, where a
+Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
+where `r` and `c` represent the rw and clumn, respectively, where a
 queen must be placed on the chessboard.
 """
 import sys
@@ -24,7 +24,7 @@ def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
-    [row.append(' ') for i in range(n) for row in board]
+    [rw.append(' ') for i in range(n) for rw in board]
     return (board)
 
 
@@ -38,10 +38,10 @@ def board_deepcopy(board):
 def get_solution(board):
     """Return the list of lists representation of a solved chessboard."""
     solution = []
-    for rw in range(len(board)):
-        for cl in range(len(board)):
-            if board[rw][cl] == "Q":
-                solution.append([rw, cl])
+    for r in range(len(board)):
+        for c in range(len(board)):
+            if board[r][c] == "Q":
+                solution.append([r, c])
                 break
     return (solution)
 
@@ -54,8 +54,8 @@ def xout(board, rw, cl):
 
     Args:
         board (list): The current working chessboard.
-        rw (int): The row where a queen was last played.
-        cl (int): The column where a queen was last played.
+        rw (int): The rw where a queen was last played.
+        cl (int): The clumn where a queen was last played.
     """
     # X out all forward spots
     for c in range(cl + 1, len(board)):
@@ -104,7 +104,7 @@ def recursive_solve(board, rw, queens, solutions):
 
     Args:
         board (list): The current working chessboard.
-        rw (int): The current working row.
+        rw (int): The current working rw.
         queens (int): The current number of placed queens.
         solutions (list): A list of lists of solutions.
     Returns:
@@ -114,11 +114,11 @@ def recursive_solve(board, rw, queens, solutions):
         solutions.append(get_solution(board))
         return (solutions)
 
-    for cl in range(len(board)):
-        if board[rw][cl] == " ":
+    for c in range(len(board)):
+        if board[rw][c] == " ":
             tmp_board = board_deepcopy(board)
-            tmp_board[rw][cl] = "Q"
-            xout(tmp_board, rw, cl)
+            tmp_board[rw][c] = "Q"
+            xout(tmp_board, rw, c)
             solutions = recursive_solve(tmp_board, rw + 1,
                                         queens + 1, solutions)
 
