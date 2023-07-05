@@ -5,15 +5,15 @@
 class Rectangle:
     """Represent a rectangle."""
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, wdth=0, hght=0):
         """Initialize a new Rectangle.
 
         Args:
-            width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle.
+            wdth (int): The width of the new rectangle.
+            hght (int): The height of the new rectangle.
         """
-        self.width = width
-        self.height = height
+        self.width = wdth
+        self.height = hght
 
     @property
     def width(self):
@@ -75,4 +75,3 @@ class Rectangle:
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
-
