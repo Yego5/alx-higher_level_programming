@@ -12,42 +12,41 @@ class Rectangle:
             width (int): The width of the new rectangle.
             height (int): The height of the new rectangle.
         """
-        self._width = width  # Changed from self.width to self._width
-        self._height = height  # Changed from self.height to self._height
+        self.rw = width
+        self.ht = height
 
     @property
-    def width(self):
+    def rw(self):
         """Get/set the width of the Rectangle."""
-        return self._width
+        return self.__rw
 
-    @width.setter
-    def width(self, value):
+    @rw.setter
+    def rw(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._width = value  # Changed from self.__width to self._width
+        self.__rw = value
 
     @property
-    def height(self):
+    def ht(self):
         """Get/set the height of the Rectangle."""
-        return self._height
+        return self.__ht
 
-    @height.setter
-    def height(self, value):
+    @ht.setter
+    def ht(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = value  # Changed from self.__height to self._height
+        self.__ht = value
 
     def area(self):
         """Return the area of the Rectangle."""
-        return (self._width * self._height)  # Changed from self.__width to self._width and self.__height to self._height
+        return (self.__rw * self.__ht)
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
-        if self._width == 0 or self._height == 0:  # Changed from self.__width to self._width and self.__height to self._height
-            return 0
-        return (self._width * 2) + (self._height * 2)  # Changed from self.__width to self._width and self.__height to self._height
-
+        if self.__rw == 0 or self.__ht == 0:
+            return (0)
+        return ((self.__rw * 2) + (self.__ht * 2))
