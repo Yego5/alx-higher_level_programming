@@ -15,4 +15,3 @@ def inherits_from(obj, class_to_check):
     if issubclass(type(obj), class_to_check) and type(obj) != class_to_check:
         return True
     return False
-
