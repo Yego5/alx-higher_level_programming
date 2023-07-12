@@ -12,4 +12,3 @@ class MyInt(int):
     def __ne__(self, val):
         """Override != operator with == behavior."""
         return super().__eq__(val)
-
