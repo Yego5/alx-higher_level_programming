@@ -1,5 +1,6 @@
 SQL - Introduction
-SQL
+
+this time with energy
 
 Resources
 Read or watch:
@@ -90,3 +91,5 @@ performance_schema
 sys                      
 $
 In the container, credentials are root/root
+
+@shadrack 
