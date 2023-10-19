@@ -1,5 +1,7 @@
 SQL - More queries
 
+REDOING SQL
+
 Resources
 Read or watch:
 
@@ -42,3 +44,5 @@ OR connect via the Web terminal
 In the container, you should start MySQL before playing with it:
 
 a happy coding
+
+@ YEGO
