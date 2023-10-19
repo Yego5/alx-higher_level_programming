@@ -7,4 +7,4 @@ WHERE tv_shows.id NOT IN (
       JOIN tv_genres ON tv_genres.id=tv_show_genres.genre_id
       WHERE tv_genres.name = "Comedy" )
 ORDER BY tv_shows.title;
--- @shachz.
+-- @shachz. redo
