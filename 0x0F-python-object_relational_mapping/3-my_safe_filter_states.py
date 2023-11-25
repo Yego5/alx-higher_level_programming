@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+#@yego5
 
 if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=sys.argv[1],
@@ -14,5 +15,4 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
     cur.close()
-    db.close()
-#kim 
+    db.close() 
