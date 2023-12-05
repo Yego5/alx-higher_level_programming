@@ -16,4 +16,3 @@ if __name__ == "__main__":
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
         pass
-#yego5

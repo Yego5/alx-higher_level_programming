@@ -21,4 +21,3 @@ for commit in json_resp[:10]:
     author = commit_data.get('author').get('name')
     print(f"{sha}: {author}")
     pass
-#yego5

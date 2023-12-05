@@ -12,4 +12,3 @@ if __name__ == "__main__":
     print("\t- content: {}".format(response.text))
 
     pass
-#yego5

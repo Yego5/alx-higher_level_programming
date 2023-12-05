@@ -17,4 +17,3 @@ if __name__ == "__main__":
         request_id = header_dict.get('X-Request-Id')
         print(request_id)
         pass
-#yego5

@@ -12,4 +12,3 @@ if __name__ == "__main__":
     id = json_resp.get('id')
     print(id)
     pass
-#yego5
